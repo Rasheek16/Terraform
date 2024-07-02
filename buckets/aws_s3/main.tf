@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "terraform-up-and-running-state-rasheek"
+  bucket = "terraform-up-and-running-state-"
   lifecycle {
     prevent_destroy = true
   }
@@ -46,7 +46,7 @@ resource "aws_dynamodb_table" "terraform_locks" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-up-and-running-state-rasheek"
+    bucket = "terraform-up-and-running-state-"
     key    = "global/s3/terraform.tfstate"
     region = "us-east-2"
 
