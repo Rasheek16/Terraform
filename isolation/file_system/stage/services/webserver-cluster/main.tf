@@ -143,3 +143,14 @@ resource "aws_security_group" "alb" {
 }
 
 
+data "terraform_remote_state" "db" {
+  backend = "s3"
+
+  config = {
+        bucket         = "terraform-up-and-running-state-rasheek"
+        key = "stage/data-stores/mysql/terraform.tfstate"
+        region = "us-east-2"
+
+  }
+}
+
