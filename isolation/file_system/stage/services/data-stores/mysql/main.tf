@@ -10,5 +10,6 @@ resource "aws_db_instance" "example" {
   skip_final_snapshot = true
   db_name             = "example_database"
 
-
+  username = var.db_username
+  password = var.db_password
 }
