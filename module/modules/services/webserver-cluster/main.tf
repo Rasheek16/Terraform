@@ -3,5 +3,5 @@ provider "aws" {
 }
 
 odule "webserver_cluster"{
-  source=" ../../../../../modules/
+  source="../../../modules/services/webserver-cluster"
 }
