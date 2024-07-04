@@ -1,9 +1,9 @@
 output "address" {
-    value = aws_db_instance.example.address
-    description = "Connect to the database at this point"
+  value       = aws_db_instance.example.address
+  description = "Connect to the database at this point"
 }
 
 output "port" {
-    value = aws_db_instance.example.port
-    description = "The port of the database is listening on"
+  value       = aws_db_instance.example.port
+  description = "The port of the database is listening on"
 }
